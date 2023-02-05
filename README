@@ -1,1 +1,6 @@
 RPI based bilboard
+- Image files found in the root directory of a USB drive will be displayed automatically
+- It is required to have the bilboard.json file in the root directory of the USB drive. If not the USB drive will be ignored
+- Images will be resized to full screen with & height
+- Display use HDMI-0 (resolution will be detected automatically)
+- JSON file contains the delay between images to display
