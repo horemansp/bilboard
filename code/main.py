@@ -22,7 +22,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import time
 import signal
-user_env = "koekoek"
+user_env = "koekoek" #depends on RPI installation. Default this user is Pi
 file_types = ["jpeg","png"]
 files_to_show = []
 files_to_show_exist = False
