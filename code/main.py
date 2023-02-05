@@ -4,8 +4,7 @@
 # USB stick needs to have bilboard.json in it's root directory
 # image files in the root directory will be listed and displayed automatically
 # Files will be resized to screen resolution
-# Files are presented in full HD 1920 x 1080
-# settings configurable in json file on the same USB
+# Settings configurable in json file on the USB
 # Use single display on HDMI0
 # v1
 # Creator: Patrik Horemans
