@@ -1,3 +1,21 @@
+###############################################################
+# Digital billboard advertising on a display using Tkinter
+# Media files are imported from a USB device (jpeg or png)
+# USB stick needs to have bilboard.json in it's root directory
+# image files in the root directory will be listed and displayed automatically
+# Files will be resized to screen resolution
+# Files are presented in full HD 1920 x 1080
+# settings configurable in json file on the same USB
+# Use single display on HDMI0
+# v1
+# Creator: Patrik Horemans
+# Copyrights: free to use
+################################################################
+# default settings
+settings_json = [{"default_delay":3,"repeat":0}]
+################################################################
+
+
 import os
 import json
 from tkinter import *
