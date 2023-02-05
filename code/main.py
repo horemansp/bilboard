@@ -82,16 +82,17 @@ if settings_file_found:
     f.close
     read_settings(settings_json)
 
-#create window object
-win = Tk()
-#win.geometry("400x300")
-win.attributes('-fullscreen',True)
-#Get the current screen width and height
-screen_width = win.winfo_screenwidth()
-screen_height = win.winfo_screenheight()
-print("Screenwidth & height:",screen_width,"x",screen_height) 
+if files_to_show_exist:
+    #create window object
+    win = Tk()
+    #win.geometry("400x300")
+    win.attributes('-fullscreen',True)
+    #Get the current screen width and height
+    screen_width = win.winfo_screenwidth()
+    screen_height = win.winfo_screenheight()
+    print("Screenwidth & height:",screen_width,"x",screen_height) 
 
-while True:
+while files_to_show_exist:
     if time.time() - msg_prev_time > msg_delay:
         msg_prev_time = time.time()
         print("showing message", msg_curr+1 , "from", len(files_to_show))
