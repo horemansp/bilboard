@@ -45,6 +45,7 @@ while not USB_drives_found:
         time.sleep(10)
     except:
         print('could not list USB drives')
+        time.sleep(10)
 
 if USB_drives_found:
     for drive in drives:
