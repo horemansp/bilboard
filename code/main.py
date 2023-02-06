@@ -21,7 +21,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import time
 import signal
-user_env = "koekoek" #depends on RPI installation. Default this user is Pi
+user_env = "koekoek" #depends on RPI installation auto login user. Default this user is pi
 file_types = ["jpeg","png"]
 files_to_show = []
 files_to_show_exist = False
@@ -63,7 +63,7 @@ if settings_file_found:
     for file in USB_files:
         for file_type in file_types:
             if file_type in file:
-                if not(file.startswith(".")) and not(file.startswith("koekoek")):
+                if not(file.startswith(".")): #ignore hidden files
                     files_to_show_exist = True
                     files_to_show.append(file)
             
@@ -73,7 +73,7 @@ if files_to_show_exist:
     
 def read_settings(a_json):
     #read settings from json variable
-    global msg_delay, msg_repeat
+    global msg_delay
     print("List to read settings from:",a_json)
     msg_delay = a_json['delay']
 
