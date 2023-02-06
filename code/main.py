@@ -11,7 +11,7 @@
 # Copyrights: free to use
 ################################################################
 # default settings
-settings_json = [{"default_delay":3,"repeat":0}]
+settings_json = [{"default_delay":3}]
 ################################################################
 
 
@@ -28,19 +28,23 @@ files_to_show_exist = False
 settings_file = "bilboard.json"
 settings_file_found = False
 USB_drives_found = False
-msg_delay = 3 #delay between adverts in seconds, overwritten by json
-msg_repeat = 0 # 0 = endless loop
 msg_prev_time = time.time() - 5000
 msg_curr = 0
 msg_to_show = ""
 
-drives = os.listdir("/media/koekoek")
-if len(drives) > 0:
-    USB_drives_found = True
-    print("USB drive(s) found:")
-    print(drives)
-else:
-    print("No USB drives found")
+
+while not USB_drives_found:
+    try:
+        drives = os.listdir("/media/" + user_env)
+        if len(drives) > 0:
+            USB_drives_found = True
+            print("USB drive(s) found:")
+            print(drives)
+        else:
+            print("No USB drives found")
+        time.sleep(10)
+    except:
+        print('could not list USB drives')
 
 if USB_drives_found:
     for drive in drives:
@@ -58,7 +62,7 @@ if settings_file_found:
     for file in USB_files:
         for file_type in file_types:
             if file_type in file:
-                if not(file.startswith(".")):
+                if not(file.startswith(".")) and not(file.startswith("koekoek")):
                     files_to_show_exist = True
                     files_to_show.append(file)
             
@@ -71,7 +75,6 @@ def read_settings(a_json):
     global msg_delay, msg_repeat
     print("List to read settings from:",a_json)
     msg_delay = a_json['delay']
-    msg_repeat = a_json['repeat']
 
 if settings_file_found:
     #read file content
