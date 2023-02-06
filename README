@@ -4,3 +4,20 @@ RPI based bilboard
 - Images will be resized to full screen with & height
 - Display use HDMI-0 (resolution will be detected automatically)
 - JSON file contains the delay between images to display
+
+How to auto-start the script on RPI:
+note:
+- assume the user you auto login on RPI is pi
+- assume your script is in /home/pi/bilboard/code
+
+mkdir /home/pi/.config/autostart
+nano /home/pi/autostart/bilboard.dekstop
+Add the following to the file:
+[Desktop Entry]
+Type= Application
+Name=Bilboard
+Exec=/usr/bin/python3 /home/pi/bilboard/code/main.py
+
+Save and reboot
+
+for more info: https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all
