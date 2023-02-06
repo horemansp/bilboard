@@ -4,6 +4,8 @@ RPI based bilboard
 - Images will be resized to full screen with & height
 - Display use HDMI-0 (resolution will be detected automatically)
 - JSON file contains the delay between images to display
+- If the USB drive is not inserted the program will retry every 10sec
+- At startup there is a delay of 10sec to make sure the environment is ready if you autostart the script
 
 How to auto-start the script on RPI:
 note:
