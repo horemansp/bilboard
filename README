@@ -22,12 +22,12 @@ note:
 - assume your script is in /home/pi/billboard/code
 
 mkdir /home/pi/.config/autostart
-nano /home/pi/autostart/billboard.dekstop
+nano /home/pi/.config/autostart/billboard.dekstop
 Add the following to the file:
 [Desktop Entry]
 Type= Application
 Name=Bilboard
-Exec=/usr/bin/python3 /home/pi/billboard/code/billboard.py
+Exec=/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py (or billboard.py)
 
 Save and reboot
 
