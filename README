@@ -10,9 +10,8 @@ RPI based billboard/advertiser
 Instructions:
 - Save billboard.json in the root folder of a USB drive or stick
 - Save .jpeg and/or .png files in the root folder
-- run billboard.py or billboard_advanced.py (or configure for autostart)
-(billboard.py will stop when USB is removed during displaying images
-billboard_advanced.py will continue working and retry to read a USB drive)
+- run billboard_advanced.py (or configure for autostart)
+
 
 
 
@@ -27,7 +26,7 @@ Add the following to the file:
 [Desktop Entry]
 Type= Application
 Name=Bilboard
-Exec=/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py (or billboard.py)
+Exec=/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py
 
 Save and reboot
 
