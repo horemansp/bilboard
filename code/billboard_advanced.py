@@ -22,7 +22,7 @@ from PIL import ImageTk, Image
 import time
 import signal
 user_env = "koekoek" #depends on RPI installation. Default this user is Pi
-file_types = ["jpeg","png"]
+file_types = ["jpeg","png","JPEG","PNG"]
 files_to_show = []
 settings_file = "bilboard.json"
 msg_prev_time = time.time() - 5000
