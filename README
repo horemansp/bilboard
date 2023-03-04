@@ -18,7 +18,7 @@ billboard_advanced.py will continue working and retry to read a USB drive)
 
 How to auto-start the script on RPI:
 note:
-- assume the user you auto login on RPI is pi
+- assume the user you auto login on RPI is pi (If another user is used then replace /pi with the /theUserName)
 - assume your script is in /home/pi/billboard/code
 
 mkdir /home/pi/.config/autostart
