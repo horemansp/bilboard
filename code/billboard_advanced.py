@@ -66,9 +66,10 @@ def read_settings(a_json):
 
 while True:
     if state ==0:
+        print("Step 1: Look for USB drives, wait 10 sec")
+        printw("Step 1-5: Look for USB drives, wait 10 sec")
         time.sleep(10)
-        print("Step 1: Look for USB drives")
-        printw("Step 1-5: Look for USB drives")
+        files_to_show = []
         try:
             drives = os.listdir("/media/" + user_env)
             if len(drives) > 0:
