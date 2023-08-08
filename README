@@ -20,28 +20,30 @@ note:
 - assume the user you auto login on RPI is pi (If another user is used then replace /pi with the /theUserName)
 - assume your script is in /home/pi/billboard/code
 
-'''
+```
 mkdir /home/pi/.config/autostart
 nano /home/pi/.config/autostart/billboard.desktop
-'''
+```
 
 Add the following to the file: (note: make sure to use the capitals for Desktop Entry etc!)
-'''[Desktop Entry]
+```
+[Desktop Entry]
 Type= Application
 Name=Bilboard
 Exec=/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py
-'''
+```
 The above won't give you any possible debug information.
 You can use Xterm for troubleshooting.
-'''
+```
 sudo apt-get install xterm -y
-'''
+```
 Then modify the billboard.desktop file to the following:
-'''[Desktop Entry]
+```
+[Desktop Entry]
 Type= Application
 Name=Bilboard
 Exec=xterm -hold - e '/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py'
-'''
+```
 
 
 Save and reboot
