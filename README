@@ -25,6 +25,7 @@ mkdir /home/pi/.config/autostart
 nano /home/pi/.config/autostart/billboard.desktop
 ```
 
+Option1:
 Add the following to the file: (note: make sure to use the capitals for Desktop Entry etc!)
 
 [Desktop Entry]
@@ -33,6 +34,8 @@ Name=Bilboard
 Exec=/usr/bin/python3 /home/pi/billboard/code/billboard_advanced.py
 
 The above won't give you any possible debug information.
+
+Option2:
 You can use Xterm for troubleshooting.
 
 sudo apt-get install xterm -y
